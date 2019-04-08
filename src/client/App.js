@@ -84,7 +84,7 @@ class App extends Component {
             </div>
           </header>
           <Switch>
-            <Route path="/" component={Home} />
+            <Route path="/" exact component={Home} />
             <Route path="/register" component={Register} />
             <Route exact path="/posts" component={withAuth(PostList)} />
             <Route
