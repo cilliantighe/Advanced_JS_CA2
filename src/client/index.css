@@ -1,0 +1,22 @@
+/*
+Advanced JavaScript
+Author: Cillian Tighe
+Student No: N00152737
+*/
+
+/*
+Some changes to the material design lite classes
+*/
+
+.demo-card-wide{
+  width: auto;
+}
+
+.mdl-textfield{
+  width: auto;
+  display: block;
+}
+
+.buttons{
+  display: -webkit-inline-box;
+}
