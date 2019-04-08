@@ -37,10 +37,6 @@ mongoose.connect(
   }
 );
 
-app.get('/', function(req, res) {
-  res.sendFile('../../public/index.html');
-});
-
 app.get('/api/home', function(req, res) {
   res.send('Welcome!');
 });
