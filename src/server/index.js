@@ -22,8 +22,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 
-// serve files from the dist directory
-server.use(express.static('dist'));
 
 const mongo_uri =
   'mongodb+srv://cillianT:cilly93@ca-2-vzb9d.mongodb.net/friend-face?retryWrites=true';
@@ -38,6 +36,10 @@ mongoose.connect(
     }
   }
 );
+
+app.get('/', function(req, res) {
+  res.sendFile('../../public/index.html');
+});
 
 app.get('/api/home', function(req, res) {
   res.send('Welcome!');
