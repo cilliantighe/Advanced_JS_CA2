@@ -56,11 +56,6 @@ class App extends Component {
               <div className="mdl-layout-spacer" />
               <nav className="mdl-navigation">
                 {!this.state.loggedIn && (
-                  <Link className="mdl-navigation__link" to="/">
-                    Home
-                  </Link>
-                )}
-                {!this.state.loggedIn && (
                   <Link className="mdl-navigation__link" to="/login">
                     Login
                   </Link>
@@ -84,7 +79,6 @@ class App extends Component {
             </div>
           </header>
           <Switch>
-            <Route path="/" exact component={Home} />
             <Route path="/register" component={Register} />
             <Route exact path="/posts" component={withAuth(PostList)} />
             <Route
